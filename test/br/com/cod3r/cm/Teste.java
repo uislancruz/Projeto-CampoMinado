@@ -14,5 +14,13 @@ class Teste {
 		assertEquals(2, a);
 		//fail("Not yet implemented");
 	}
+	@Test
+	void testarSerIgualATres() {
+		
+		int x = 2 + 10 - 7;
+		
+		assertEquals(3, x);
+		
+	}
 
 }
