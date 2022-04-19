@@ -17,7 +17,7 @@ class Teste {
 	@Test
 	void testarSerIgualATres() {
 		
-		int x = 2 + 10 - 7;
+		int x = 2 + 10 - 9;
 		
 		assertEquals(3, x);
 		
