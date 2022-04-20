@@ -15,7 +15,7 @@ public class Campo {
 	
 	private List<Campo> vizinhos = new ArrayList<>();
 	
-	Campo(int linha, int coluna){
+	public Campo(int linha, int coluna){
 		this.linha = linha;
 		this.coluna = coluna;
 	}
