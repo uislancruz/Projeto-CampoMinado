@@ -110,6 +110,15 @@ public class CampoTeste {
 		
 	}
 	
-	
+	@Test
+	void testeAbrirComVizinho() {
+		Campo vizinho1 = new Campo(2,2);
+		Campo vizinho2 = new Campo(2,3);
+		Campo vizinho3 = new Campo(2,4);
+		
+		campo.adicionarVizinho(vizinho1);
+		campo.adicionarVizinho(vizinho1);
+		campo.adicionarVizinho(vizinho1);
+	}
 
 }
