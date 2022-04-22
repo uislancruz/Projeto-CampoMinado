@@ -105,9 +105,9 @@ public class CampoTeste {
 	void testarAbrirMinadoNaoMarcado() {
 		campo.minar();
 		assertThrows(ExplosaoException.class, () -> {
-			campo.minar();
+			campo.abrir();
 		});
-		assertFalse(campo.abrir());
+		
 	}
 	
 	
