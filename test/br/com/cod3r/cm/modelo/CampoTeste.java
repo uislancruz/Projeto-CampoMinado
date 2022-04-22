@@ -2,10 +2,12 @@ package br.com.cod3r.cm.modelo;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import br.com.cod3r.com.excecao.ExplosaoException;
 import br.com.cod3r.com.modelo.Campo;
 
 public class CampoTeste {
@@ -97,6 +99,14 @@ public class CampoTeste {
 	void testarAbrirMinadoMarcado() {
 		campo.alternarMarcacao();
 		campo.minar();
+		assertFalse(campo.abrir());
+	}
+	@Test
+	void testarAbrirMinadoNaoMarcado() {
+		campo.minar();
+		assertThrows(ExplosaoException.class, () -> {
+			campo.minar();
+		});
 		assertFalse(campo.abrir());
 	}
 	
