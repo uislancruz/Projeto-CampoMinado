@@ -138,7 +138,7 @@ public class CampoTeste {
 		
 		campo.abrir();
 		
-		assertTrue(campo22.isAbrerto() && !campo11.isAbrerto());
+		assertTrue(campo22.isAberto() && campo11.isFechado());
 	}
 
 }
