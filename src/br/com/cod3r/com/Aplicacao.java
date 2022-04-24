@@ -10,6 +10,7 @@ public class Aplicacao {
 		
 		new TabuleiroConsole(tabuleiro);
 		
+			
 	}
 
 }

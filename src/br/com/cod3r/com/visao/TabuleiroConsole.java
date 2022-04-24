@@ -20,12 +20,15 @@ public class TabuleiroConsole {
 	private void executarJogo() {
 		try {
 			boolean continuar = true;
-			cicloDoJogo();			
 			
 			while(continuar) {
+				cicloDoJogo();
+				
 				System.out.println("Outra partida? (S/n)");
+				
 				String resposta = entrada.nextLine();
 				
+								
 				if("n".equalsIgnoreCase(resposta)){
 					continuar = false;
 				}else {
@@ -41,11 +44,29 @@ public class TabuleiroConsole {
 
 	private void cicloDoJogo() {
 		try {
+			
+			while(!tabuleiro.objetivoAlcancado()) {
+				System.out.println(tabuleiro);
+				String digitado = capturarValorDigitado("Digite (x, y): ");
+				
+				System.out.println(digitado.split(","));
+			}
 			System.out.println("Voce ganhou!!!!");
 		} catch (ExplosaoException e) {
 			System.out.println("Voce perdeu!");
 		}
 		
+	}
+	
+	private String capturarValorDigitado(String texto) {
+		System.out.print(texto);
+		String digitado = entrada.nextLine();
+		
+		if("sair".equalsIgnoreCase(digitado)){
+			throw new SairException();
+		}
+		
+		return digitado;
 	}
 
 }
