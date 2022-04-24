@@ -1,5 +1,7 @@
 package br.com.cod3r.com.visao;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 import br.com.cod3r.com.excecao.ExplosaoException;
@@ -49,7 +51,12 @@ public class TabuleiroConsole {
 				System.out.println(tabuleiro);
 				String digitado = capturarValorDigitado("Digite (x, y): ");
 				
-				System.out.println(digitado.split(","));
+				
+				Iterator<Integer>xy = Arrays.stream(digitado.split(","))
+				.map(e -> Integer.parseInt(e.trim())).iterator();
+				
+				System.out.println(xy.next());
+				System.out.println(xy.next());
 			}
 			System.out.println("Voce ganhou!!!!");
 		} catch (ExplosaoException e) {
