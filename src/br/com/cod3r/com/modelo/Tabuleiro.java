@@ -91,6 +91,7 @@ public class Tabuleiro {
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
+		sb.append("  ");
 		for (int c = 0; c < colunas; c++) {
 			sb.append(" ");
 			sb.append(c);
