@@ -89,10 +89,16 @@ public class Campo {
 		return marcado;
 	}
 	
+	
+	
 	public boolean isAberto() {
 		return aberto;
 	}
 	
+	void setAberto(boolean aberto) {
+		this.aberto = aberto;
+	}
+
 	public boolean isFechado() {
 		return !isAberto();
 	}
